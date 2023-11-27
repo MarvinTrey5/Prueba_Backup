@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from prueba1 import views as ap1v
+# Urls De los archivos html creados.
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', ap1v.index,name="home"),
