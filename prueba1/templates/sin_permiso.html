@@ -4,8 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bloqueado</title>
+    <!-- Estilo para la página web-->
+    <style>
+        body {
+            background-color: mediumpurple;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        h1{
+            background-color: #b2dfdb;
+            text-align: center;
+            padding: 0.1em;
+            border-radius: 0.9em;
+            font-family: monospace;
+            font-style: oblique;
+            box-shadow: 1px 1px 1px 1px black;
+        }
+        .container {
+            background-color: aqua;
+            width: 450px;
+            box-shadow: 3px 3px 3px 3px black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            width: 70%;
+            height: 60%;
+            margin-bottom: 20px;
+            border-radius: 3.5em;
+            box-shadow: 3px 3px 3px 3px blue;
+            cursor: pointer;
+        }
+        /*
+            Al momento de acercar el mouse se cambiará de coloe 
+            el body, container, h1.
+        */
+        body:hover{
+            background-color: red;
+        }
+        .container:hover{
+            background-color: red;
+        }
+        h1:hover{
+            color: white;
+            background-color: red;
+        }
+    </style>
 </head>
 <body>
-    <h1>No tienes permiso</h1>
+    <!--Se almacena en un div junto con el titulo y una imagen con su url-->
+    <div class="container">
+        <h1>No tienes permiso</h1>
+        <img src="https://us.123rf.com/450wm/snake3d/snake3d1110/snake3d111000006/10845287-salvaguardia-de-datos-de-seguridad-de-candado-de-bloqueo-puzzle-v%C3%ADnculo-cerrado-c%C3%B3digo-secreto.jpg">
+    </div>
 </body>
 </html>
