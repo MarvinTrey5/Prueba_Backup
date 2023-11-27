@@ -3,6 +3,8 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User, Group
 
+# Clase para añadir un nuevo estudiante o Cajero.
+# y se llama en la view.py 
 class NewUserForm(UserCreationForm):
     email=forms.EmailField(required=True)
     group=forms.ModelChoiceField(queryset=Group.objects.all(),required=True,label='Grupo')
