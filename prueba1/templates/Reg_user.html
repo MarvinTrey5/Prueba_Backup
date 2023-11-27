@@ -1,80 +1,91 @@
-<style>
-    body {
-        background-color: #eceff1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 50px;
-    }
-    h1{
-        background-color: #b2dfdb;
-        text-align: center;
-        padding: 0.1em;
-        border-radius: 0.9em;
-        font-family: monospace;
-        font-style: oblique;
-        box-shadow: 1px 1px 1px 1px black;
-    }
-    .container {
-        background-color: aqua;
-        width: 450px;
-        box-shadow: 3px 3px 3px 3px black;
-    }
-    label{
-        font-size: 18px;
-        text-shadow: 2px 2px 2px black;
-        font-family: monospace;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Estilos para la página web.-->
+    <style>
+        body {
+            background-color: #eceff1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        h1{
+            background-color: #b2dfdb;
+            text-align: center;
+            padding: 0.1em;
+            border-radius: 0.9em;
+            font-family: monospace;
+            font-style: oblique;
+            box-shadow: 1px 1px 1px 1px black;
+        }
+        .container {
+            background-color: aqua;
+            width: 450px;
+            box-shadow: 3px 3px 3px 3px black;
+        }
+        label{
+            font-size: 18px;
+            text-shadow: 2px 2px 2px black;
+            font-family: monospace;
+        }
 
-    form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-    .form-group {
-        display: block;
-        flex-direction: row;
-        align-items: center;
-        margin-bottom: 10px;
-    }
-    input{
-        font-size: 18px;
-        text-align: justify;
-        font-family: monospace;
-        box-shadow: 3px 3px 3px 3px blue;
-        border-radius: 20px;
-        align-items: center;
-        margin-bottom: 0;
-    }
-    #id_group{
-        color: white;
-        box-shadow: 3px 3px 3px 3px black;
-        background-color: darkcyan;
-    }
-    #id_group:focus{
-        color: black;
-        background-color: #b2dfdb;
-    }
-    .btn-primary{
-        width: 32%;
-        height: 20%;
-        font-family: cursive;
-        font-size: 18px;
-        text-align: center;
-        margin-top: 10px;
-        border-radius: 1.5em;
-        color: white;
-        text-shadow: 2px 2px 2px black;
-        box-shadow: 2px 2px 2px 2px black;
-        background-color: darkcyan;
-        cursor: pointer;
-    }
-    .btn-primary:hover{
-        color: darkblue;
-        background-color: white;
-    }
-</style>
+        .form-group {
+            display: block;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        input{
+            font-size: 18px;
+            text-align: justify;
+            font-family: monospace;
+            box-shadow: 3px 3px 3px 3px blue;
+            border-radius: 20px;
+            align-items: center;
+            margin-bottom: 0;
+        }
+        #id_group{
+            color: white;
+            box-shadow: 3px 3px 3px 3px black;
+            background-color: darkcyan;
+        }
+        #id_group:focus{
+            color: black;
+            background-color: #b2dfdb;
+        }
+        .btn-primary{
+            width: 32%;
+            height: 20%;
+            font-family: cursive;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 10px;
+            border-radius: 1.5em;
+            color: white;
+            text-shadow: 2px 2px 2px black;
+            box-shadow: 2px 2px 2px 2px black;
+            background-color: darkcyan;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .btn-primary:hover{
+            color: darkblue;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <!--Registro de usuario-->
 <div class="container">
     <h1>Registro de Usuario</h1>
     <form action="" method="post">
@@ -107,3 +118,11 @@
         <input type="submit" class="btn btn-primary" value="Registrar">
     </form>
 </div>
+</body>
+</html>
+
+
+
+
+
+
