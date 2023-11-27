@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proveedores</title>
+    <style>
+        /*
+            Centramos todo lo que almacene el body junto con sus items
+        */
+        body{
+            background-color: #a5d6a7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        /*
+            Añadimos un titulo principal a todas las páginas
+            además le añadimos un borde interactivo, con sombra
+            al texto.
+        */
+        h1{
+            text-align: center;
+            color: white;
+            background-color: blue;
+            font-family: cursive;
+            font-size: 30px;
+            padding: 0.2em;
+            text-shadow: 2px 2px 5px black;
+            box-shadow: 2px 2px 2px 2px black;
+            border-radius: 15px;
+            margin-left: 10%;
+            margin-top: 10px;
+        }
+        /*
+            De igual manera que las anteriores obtenemos la etiqueta botón
+            le asignamos la funcionalidad cursor:pointer. Al dar clic nos abrirá
+            una nueva página que será para ingresar un nuevo paciente.
+        */
+        button{
+            width: 150%;
+            height: 60%;
+            font-style:italic;
+            font-family: cursive;
+            font-size: 15px;
+            border-radius: 1.5em;
+            text-shadow: 2px 2px 2px black;
+            box-shadow: 2px 2px 2px 2px black;
+            color: white;
+            background-color: blue;
+            cursor: pointer;
+            margin-left: 10%;
+            margin-top: 10px;
+        }
+        /*
+            Cuando se acerque se cambiará de color
+            con la utilización de hover.
+        */
+        button:hover{
+            color: black;
+            background-color: white;
+        }
+        /*
+            Se mantiene el márgen entre el título 
+            y el botón.
+        */
+        button:last-child {
+            margin-right: 0;
+        }
+        /*
+            Configuramos la tabla de médicos ingresados
+            le asignamos un borde y un márgen espaciado del
+            botón.
+        */
+        table{
+            border: 3px solid black;
+            margin-top: 10px;
+            margin-left: 10%;
+            width: 70%;
+        }
+
+        /*
+            Se utiliza la etiqueta caption para el título de la tabla.
+        */
+        caption{
+            font-size: 15px;
+            border: 4px solid black;
+            background-color: darkviolet;
+            color: white;
+            font-family: monospace;
+            text-align: center;
+        }
+        /*
+            Aqui referenciamos los campos de nuestras tablas
+            tanto los encabezados que su letra es de color blanco
+            y el color de la celda es darkviolet y el borde de color black.
+        */
+        tr,td,th{
+            border: 3px solid black;
+            border-color: black;
+        }
+        td {
+       
+            background-color: darkviolet;
+            color: white;
+            font-family: monospace;
+            text-align: center;
+        }
+        /*
+            Para las filas se les da un color de fondo lightblue
+            y si letra de color black. 
+        */
+        tr {
+            background-color: lightblue;
+            text-align: center;
+            color: black;
+            font-style: italic;
+            border-color: 3px black;
+        }
+        /*
+            Se cambia de color a las celdas de los datos 
+            obtenidos de nuestra base de datos.
+        */
+        td {
+            background-color: white;
+            color: black;
+            padding: 5px;
+            border-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Proveedores</h1>
+    <a href="{% url 'add_prov' %}"><button>Agregar Proveedor</button></a>
+    <table>
+        <thead>
+            <caption>Proveedores</caption>
+            <th>id</th>
+            <th>nombre</th>
+            <th>telefono</th>
+        </thead>
+        <tbody>
+            {% for proveedor in lisprov %}
+            <tr>
+                <td>{{ proveedor.id }}</td>
+                <td>{{ proveedor.nombre }}</td>
+                <td>{{ proveedor.telefono }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
