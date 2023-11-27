@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!--Estilos para la página web del usuario.-->
     <style>
         body{
             background-color: slategrey;
@@ -11,6 +12,9 @@
             flex-direction: column;
             align-items: center;
         }
+        /*
+            Para el título principal.
+        */
         h1{
             text-align: center;
             color: white;
@@ -23,6 +27,10 @@
             border-radius: 15px;
             margin-top: 10px;
         }
+        /*
+            Para el subtitulo donde aparecerá el nombre
+            del usuario.
+        */
         h3{
             text-align: center;
             color: white;
@@ -34,6 +42,9 @@
             border-radius: 15px;
             margin-top: 10px;
         }
+        /*
+            Para el cuando acceda y muestre que es estudiante.
+        */
         p{
             text-align: center;
             color: white;
@@ -67,6 +78,8 @@
     </style>
 </head>
 <body>
+    <!--Para la interfaz cuando el usuario haya accedido
+    a través del login.-->
     {% if es_estudiante or es_admin%}
         <h1>Bienvenido </h1> <h3>{{ user.username }}</h3> <p>al área de Estudiantes</p>
     {% else %}
