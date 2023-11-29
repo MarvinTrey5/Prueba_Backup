@@ -81,6 +81,7 @@ DATABASES = {
     }
 }
 """
+# Conexión A PgAdmin,Nombre Base De Datos,Usuario.
 DATABASES = {   
     "default": {
         "ENGINE": "django.db.backends.postgresql",
